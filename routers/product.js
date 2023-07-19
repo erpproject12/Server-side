@@ -12,8 +12,10 @@ router.post('/insert', InsertProduct )
 
 router.get('/view', ViewProduct )
 
-router.delete('/delete', DeleteProduct )
+router.get('/view/:id', ViewProduct )
 
-router.put('/update', UpdateProduct )
+router.delete('/delete/:id', DeleteProduct )
+
+router.put('/update/:id', UpdateProduct )
 
 module.exports = router
