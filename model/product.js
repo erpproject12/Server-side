@@ -13,7 +13,7 @@ const ProductSchema = new Schema ({
         required:true
     },
     tax_code:{
-        type:String,
+        type:Number,
         required:true
     },
     product_description:{
@@ -22,43 +22,43 @@ const ProductSchema = new Schema ({
     },
     rack_no:{
         type:Number,
-        required:true
+       
     },
     HSN:{
         type:String,
-        required:true
+        
     },
     product_barcode:{
         type:String,
-        required:true
+       
     },
     category:{
         type:String,
-        required:true
+       
     },
     manufactures:{
         type:String,
-        required:true
+       
     },
     unit_of_masure:{
         type:String,
-        required:true
+     
     },
     active_status:{
         type:String,
-        required:true
+     
     },
     weight_dimension:{
         type:String,
-        required:true
+        
     },
     variants:{
         type:String,
-        required:true
+      
     },
     reorder_point:{
         type:String,
-        required:true
+       
     },
     date:{
         type:Date,
