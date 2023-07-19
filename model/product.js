@@ -47,7 +47,7 @@ const ProductSchema = new Schema ({
     },
     active_status:{
         type:String,
-     
+
 
     },
     weight_dimension:{
@@ -57,11 +57,13 @@ const ProductSchema = new Schema ({
     variants:{
         type:String,
 
+
       
     },
     reorder_point:{
         type:String,
        
+
 
     },
     date:{

@@ -32,6 +32,7 @@ dotenv.config()
 
      
         try{
+
             if(req.params.id){
                 const exm=await Product.findById(req.params.id);  //singlr ptoduct view insted of using another single api we can use if condition
            return res.json(exm)
