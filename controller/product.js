@@ -32,6 +32,7 @@ dotenv.config()
 
      
         try{
+
             if(req.params.id){
                 const exm=await Product.findById(req.params.id);  //singlr ptoduct view insted of using another single api we can use if condition
            return res.json(exm)
@@ -40,6 +41,7 @@ dotenv.config()
            return res.json(exm)  
         } 
     }
+
         catch (error){
             console.error(error.message);
             res.status(500).send("Internal some error occured");
@@ -87,8 +89,10 @@ const UpdateProduct = async (req, res) => {
         if (variants) { newProduct.variants = variants}
          if (reorder_point) { newProduct.reorder_point = reorder_point }
         if (active_status) { newProduct.active_status = active_status }
-        let updatedGrocery = await Product.findByIdAndUpdate(id, { $set: newProduct }, { new: true })
-        res.json({ success: true, updatedGrocery })
+
+        let updatedProduct = await Product.findByIdAndUpdate(id, { $set: newProduct }, { new: true })
+        res.json({ success: true, updatedProduct })
+
     }
     catch (err) {
         res.json({ success: false, message: "Internal server error!!!" })
@@ -96,4 +100,4 @@ const UpdateProduct = async (req, res) => {
     }
 }
 
-      module.exports = {  InsertProduct, ViewProduct, DeleteProduct, UpdateProduct }
+      module.exports = {  InsertProduct, ViewProduct, DeleteProduct, UpdateProduct } 
