@@ -8,15 +8,21 @@ const { InsertParty,  ViewParty , DeleteParty,UpdateParty } = require ('../contr
 
 //product
 
-router.post('/insert', InsertProduct )
-router.get('/view', ViewProduct )
+
+router.get('/view/:id', ViewProduct )
+
 router.delete('/delete/:id', DeleteProduct )
+
 router.put('/update/:id', UpdateProduct )
+
+router.post('/insert', InsertProduct )
+
 
 //Party
 router.post('/party_insert', InsertParty)
 router.get('/party_view',  ViewParty)
 router.delete('/party_delete/:id', DeleteParty)
 router.put('/party_update/:id', UpdateParty)
+
 
 module.exports = router

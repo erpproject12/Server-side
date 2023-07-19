@@ -22,7 +22,7 @@ const ProductSchema = new Schema ({
     },
     rack_no:{
         type:Number,
-       
+
     },
     HSN:{
         type:String,
@@ -30,6 +30,7 @@ const ProductSchema = new Schema ({
     },
     product_barcode:{
         type:String,
+
        
     },
     category:{
@@ -46,7 +47,7 @@ const ProductSchema = new Schema ({
     },
     active_status:{
         type:String,
-     
+
     },
     weight_dimension:{
         type:String,
@@ -54,11 +55,12 @@ const ProductSchema = new Schema ({
     },
     variants:{
         type:String,
-      
+
+        
     },
     reorder_point:{
         type:String,
-       
+
     },
     date:{
         type:Date,
