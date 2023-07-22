@@ -9,7 +9,7 @@ try{
     let party_insert = new Partyschema ({ party_name,party_phone,party_email,party_address,party_street,party_city,party_state,party_pincode,party_country,party_GST,party_account_type,party_creadit_limit,party_creadit_days})
 
     const party =await party_insert.save();
-    res.json({party})
+    res.json(party)
 
 }catch(err){
     console.log("error"+err)
@@ -19,8 +19,13 @@ try{
 
 const ViewParty = async (req,res)=>{
     try{
+        if(req.params.id){
+            const partyv = await Partyschema.findById(req.params.id);
+            res.json(partyv)
+        }else{
         const partyv = await Partyschema.find();
-        res.json({partyv})
+        res.json(partyv)
+        }
     }catch(err){
         console.error(err.message);
         res.status(500).send("Internal some error occured");

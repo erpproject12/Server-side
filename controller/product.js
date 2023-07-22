@@ -41,7 +41,7 @@ dotenv.config()
            return res.json(exm)  
         } 
     }
-
+    
         catch (error){
             console.error(error.message);
             res.status(500).send("Internal some error occured");
@@ -74,7 +74,7 @@ const UpdateProduct = async (req, res) => {
         if (!product) {
             return res.json({ success: false, message: "Product Not Found!!!" })
         }
-        let newProduct = {}
+        let newProduct = {}     
         if (product_name) { newProduct.product_name = product_name } //input tag name , object.schema name, input tag name
         if (product_code) { newProduct.product_code = product_code }
         if (tax_code) { newProduct.tax_code = tax_code }
